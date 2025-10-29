@@ -1,0 +1,563 @@
+2025-10-28T12:22:37.924+01:00  INFO 5164 --- [main] [main] [                                                 ] com.candyshop.main.MainApplication       : Starting MainApplication using Java 17.0.16 with PID 5164 (C:\DAW\candyshop\main\target\classes started by oiram in C:\DAW\candyshop)
+2025-10-28T12:22:37.931+01:00  INFO 5164 --- [main] [main] [                                                 ] com.candyshop.main.MainApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-10-28T12:22:38.998+01:00  INFO 5164 --- [main] [main] [                                                 ] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-28T12:22:39.058+01:00  INFO 5164 --- [main] [main] [                                                 ] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 44 ms. Found 1 JPA repository interface.
+2025-10-28T12:22:39.803+01:00  INFO 5164 --- [main] [main] [                                                 ] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2025-10-28T12:22:39.825+01:00  INFO 5164 --- [main] [main] [                                                 ] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-28T12:22:39.825+01:00  INFO 5164 --- [main] [main] [                                                 ] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.11]
+2025-10-28T12:22:39.928+01:00  INFO 5164 --- [main] [main] [                                                 ] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1938 ms
+2025-10-28T12:22:40.405+01:00  INFO 5164 --- [main] [main] [                                                 ] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-28T12:22:40.908+01:00  INFO 5164 --- [main] [main] [                                                 ] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.1.Final
+2025-10-28T12:22:41.711+01:00  INFO 5164 --- [main] [main] [                                                 ] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-28T12:22:41.749+01:00  INFO 5164 --- [main] [main] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-28T12:22:42.066+01:00  INFO 5164 --- [main] [main] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@72b53f27
+2025-10-28T12:22:42.068+01:00  INFO 5164 --- [main] [main] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-28T12:22:42.124+01:00  WARN 5164 --- [main] [main] [                                                 ] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-28T12:22:42.169+01:00  INFO 5164 --- [main] [main] [                                                 ] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/tienda_chuches]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.43
+	Default catalog/schema: tienda_chuches/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-28T12:22:43.065+01:00  INFO 5164 --- [main] [main] [                                                 ] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-28T12:22:43.167+01:00  INFO 5164 --- [main] [main] [                                                 ] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-28T12:22:43.257+01:00  INFO 5164 --- [main] [main] [                                                 ] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-28T12:22:43.439+01:00  WARN 5164 --- [main] [main] [                                                 ] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-28T12:22:43.832+01:00  WARN 5164 --- [main] [main] [                                                 ] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-10-28T12:22:44.566+01:00  INFO 5164 --- [main] [main] [                                                 ] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-10-28T12:22:44.802+01:00  INFO 5164 --- [main] [main] [                                                 ] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2025-10-28T12:22:44.815+01:00  INFO 5164 --- [main] [main] [                                                 ] com.candyshop.main.MainApplication       : Started MainApplication in 7.436 seconds (process running for 8.128)
+2025-10-28T12:22:46.474+01:00  INFO 5164 --- [main] [RMI TCP Connection(2)-127.0.0.1] [                                                 ] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-28T12:22:46.474+01:00  INFO 5164 --- [main] [RMI TCP Connection(2)-127.0.0.1] [                                                 ] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-28T12:22:46.476+01:00  INFO 5164 --- [main] [RMI TCP Connection(2)-127.0.0.1] [                                                 ] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-10-28T12:24:05.209+01:00  WARN 5164 --- [main] [http-nio-8080-exec-2] [                                                 ] o.s.w.s.h.HandlerMappingIntrospector     : Cache miss for REQUEST dispatch to '/api/candyShop/crear' (previous null). Performing CorsConfiguration lookup. This is logged once only at WARN level, and every time at TRACE.
+2025-10-28T12:28:06.393+01:00  INFO 6496 --- [main] [main] [                                                 ] com.candyshop.main.MainApplication       : Starting MainApplication using Java 17.0.16 with PID 6496 (C:\DAW\candyshop\main\target\classes started by oiram in C:\DAW\candyshop)
+2025-10-28T12:28:06.410+01:00  INFO 6496 --- [main] [main] [                                                 ] com.candyshop.main.MainApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-10-28T12:28:07.426+01:00  INFO 6496 --- [main] [main] [                                                 ] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-28T12:28:07.508+01:00  INFO 6496 --- [main] [main] [                                                 ] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 69 ms. Found 1 JPA repository interface.
+2025-10-28T12:28:08.307+01:00  INFO 6496 --- [main] [main] [                                                 ] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2025-10-28T12:28:08.328+01:00  INFO 6496 --- [main] [main] [                                                 ] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-28T12:28:08.329+01:00  INFO 6496 --- [main] [main] [                                                 ] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.11]
+2025-10-28T12:28:08.413+01:00  INFO 6496 --- [main] [main] [                                                 ] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1947 ms
+2025-10-28T12:28:08.933+01:00  INFO 6496 --- [main] [main] [                                                 ] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-28T12:28:09.403+01:00  INFO 6496 --- [main] [main] [                                                 ] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.1.Final
+2025-10-28T12:28:10.175+01:00  INFO 6496 --- [main] [main] [                                                 ] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-28T12:28:10.213+01:00  INFO 6496 --- [main] [main] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-28T12:28:10.513+01:00  INFO 6496 --- [main] [main] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@41463c56
+2025-10-28T12:28:10.515+01:00  INFO 6496 --- [main] [main] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-28T12:28:10.563+01:00  WARN 6496 --- [main] [main] [                                                 ] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-28T12:28:10.602+01:00  INFO 6496 --- [main] [main] [                                                 ] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/tienda_chuches]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.43
+	Default catalog/schema: tienda_chuches/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-28T12:28:11.490+01:00  INFO 6496 --- [main] [main] [                                                 ] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-28T12:28:11.546+01:00  INFO 6496 --- [main] [main] [                                                 ] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-28T12:28:11.639+01:00  INFO 6496 --- [main] [main] [                                                 ] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-28T12:28:11.791+01:00  WARN 6496 --- [main] [main] [                                                 ] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-28T12:28:12.225+01:00  WARN 6496 --- [main] [main] [                                                 ] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-10-28T12:28:13.152+01:00  INFO 6496 --- [main] [main] [                                                 ] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-10-28T12:28:13.363+01:00  INFO 6496 --- [main] [main] [                                                 ] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2025-10-28T12:28:13.376+01:00  INFO 6496 --- [main] [main] [                                                 ] com.candyshop.main.MainApplication       : Started MainApplication in 7.553 seconds (process running for 8.258)
+2025-10-28T12:28:14.922+01:00  INFO 6496 --- [main] [RMI TCP Connection(2)-127.0.0.1] [                                                 ] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-28T12:28:14.922+01:00  INFO 6496 --- [main] [RMI TCP Connection(2)-127.0.0.1] [                                                 ] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-28T12:28:14.923+01:00  INFO 6496 --- [main] [RMI TCP Connection(2)-127.0.0.1] [                                                 ] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-10-28T12:28:38.828+01:00  WARN 6496 --- [main] [http-nio-8080-exec-1] [                                                 ] o.s.w.s.h.HandlerMappingIntrospector     : Cache miss for REQUEST dispatch to '/api/candyShop/crear' (previous null). Performing CorsConfiguration lookup. This is logged once only at WARN level, and every time at TRACE.
+2025-10-28T12:31:18.481+01:00  INFO 14452 --- [main] [main] [                                                 ] com.candyshop.main.MainApplication       : Starting MainApplication using Java 17.0.16 with PID 14452 (C:\DAW\candyshop\main\target\classes started by oiram in C:\DAW\candyshop)
+2025-10-28T12:31:18.489+01:00  INFO 14452 --- [main] [main] [                                                 ] com.candyshop.main.MainApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-10-28T12:31:19.583+01:00  INFO 14452 --- [main] [main] [                                                 ] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-28T12:31:19.654+01:00  INFO 14452 --- [main] [main] [                                                 ] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48 ms. Found 1 JPA repository interface.
+2025-10-28T12:31:20.470+01:00  INFO 14452 --- [main] [main] [                                                 ] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2025-10-28T12:31:20.501+01:00  INFO 14452 --- [main] [main] [                                                 ] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-28T12:31:20.502+01:00  INFO 14452 --- [main] [main] [                                                 ] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.11]
+2025-10-28T12:31:20.635+01:00  INFO 14452 --- [main] [main] [                                                 ] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2079 ms
+2025-10-28T12:31:21.262+01:00  INFO 14452 --- [main] [main] [                                                 ] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-28T12:31:21.407+01:00  INFO 14452 --- [main] [main] [                                                 ] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.1.Final
+2025-10-28T12:31:22.533+01:00  INFO 14452 --- [main] [main] [                                                 ] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-28T12:31:22.585+01:00  INFO 14452 --- [main] [main] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-28T12:31:22.904+01:00  INFO 14452 --- [main] [main] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2d34866a
+2025-10-28T12:31:22.907+01:00  INFO 14452 --- [main] [main] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-28T12:31:22.975+01:00  WARN 14452 --- [main] [main] [                                                 ] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-28T12:31:22.992+01:00  INFO 14452 --- [main] [main] [                                                 ] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/tienda_chuches]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.43
+	Default catalog/schema: tienda_chuches/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-28T12:31:23.900+01:00  INFO 14452 --- [main] [main] [                                                 ] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-28T12:31:23.954+01:00  INFO 14452 --- [main] [main] [                                                 ] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-28T12:31:24.062+01:00  INFO 14452 --- [main] [main] [                                                 ] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-28T12:31:24.234+01:00  WARN 14452 --- [main] [main] [                                                 ] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-28T12:31:24.652+01:00  WARN 14452 --- [main] [main] [                                                 ] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-10-28T12:31:25.384+01:00  INFO 14452 --- [main] [main] [                                                 ] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-10-28T12:31:25.635+01:00  INFO 14452 --- [main] [main] [                                                 ] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2025-10-28T12:31:25.646+01:00  INFO 14452 --- [main] [main] [                                                 ] com.candyshop.main.MainApplication       : Started MainApplication in 7.754 seconds (process running for 8.555)
+2025-10-28T12:31:26.981+01:00  INFO 14452 --- [main] [RMI TCP Connection(2)-127.0.0.1] [                                                 ] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-28T12:31:26.982+01:00  INFO 14452 --- [main] [RMI TCP Connection(2)-127.0.0.1] [                                                 ] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-28T12:31:26.983+01:00  INFO 14452 --- [main] [RMI TCP Connection(2)-127.0.0.1] [                                                 ] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-10-28T12:31:34.228+01:00  WARN 14452 --- [main] [http-nio-8080-exec-2] [                                                 ] o.s.w.s.h.HandlerMappingIntrospector     : Cache miss for REQUEST dispatch to '/api/candyShop/crear' (previous null). Performing CorsConfiguration lookup. This is logged once only at WARN level, and every time at TRACE.
+2025-10-28T12:47:15.695+01:00  INFO 1408 --- [main] [main] [                                                 ] com.candyshop.main.MainApplication       : Starting MainApplication using Java 17.0.16 with PID 1408 (C:\DAW\candyshop\main\target\classes started by oiram in C:\DAW\candyshop)
+2025-10-28T12:47:15.705+01:00  INFO 1408 --- [main] [main] [                                                 ] com.candyshop.main.MainApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-10-28T12:47:16.720+01:00  INFO 1408 --- [main] [main] [                                                 ] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-28T12:47:16.807+01:00  INFO 1408 --- [main] [main] [                                                 ] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 73 ms. Found 1 JPA repository interface.
+2025-10-28T12:47:17.551+01:00  INFO 1408 --- [main] [main] [                                                 ] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2025-10-28T12:47:17.573+01:00  INFO 1408 --- [main] [main] [                                                 ] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-28T12:47:17.575+01:00  INFO 1408 --- [main] [main] [                                                 ] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.11]
+2025-10-28T12:47:17.683+01:00  INFO 1408 --- [main] [main] [                                                 ] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1926 ms
+2025-10-28T12:47:18.204+01:00  INFO 1408 --- [main] [main] [                                                 ] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-28T12:47:18.335+01:00  INFO 1408 --- [main] [main] [                                                 ] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.1.Final
+2025-10-28T12:47:19.380+01:00  INFO 1408 --- [main] [main] [                                                 ] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-28T12:47:19.416+01:00  INFO 1408 --- [main] [main] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-28T12:47:19.704+01:00  INFO 1408 --- [main] [main] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@27d5eb00
+2025-10-28T12:47:19.706+01:00  INFO 1408 --- [main] [main] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-28T12:47:19.766+01:00  WARN 1408 --- [main] [main] [                                                 ] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-28T12:47:19.781+01:00  INFO 1408 --- [main] [main] [                                                 ] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/tienda_chuches]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.43
+	Default catalog/schema: tienda_chuches/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-28T12:47:20.738+01:00  INFO 1408 --- [main] [main] [                                                 ] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-28T12:47:20.863+01:00  INFO 1408 --- [main] [main] [                                                 ] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-28T12:47:20.956+01:00  INFO 1408 --- [main] [main] [                                                 ] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-28T12:47:21.101+01:00  WARN 1408 --- [main] [main] [                                                 ] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-28T12:47:21.541+01:00  WARN 1408 --- [main] [main] [                                                 ] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-10-28T12:47:22.474+01:00  INFO 1408 --- [main] [main] [                                                 ] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-10-28T12:47:22.699+01:00  INFO 1408 --- [main] [main] [                                                 ] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2025-10-28T12:47:22.710+01:00  INFO 1408 --- [main] [main] [                                                 ] com.candyshop.main.MainApplication       : Started MainApplication in 7.555 seconds (process running for 8.206)
+2025-10-28T12:47:24.324+01:00  INFO 1408 --- [main] [RMI TCP Connection(2)-127.0.0.1] [                                                 ] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-28T12:47:24.325+01:00  INFO 1408 --- [main] [RMI TCP Connection(2)-127.0.0.1] [                                                 ] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-28T12:47:24.326+01:00  INFO 1408 --- [main] [RMI TCP Connection(2)-127.0.0.1] [                                                 ] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-10-28T12:47:35.097+01:00  WARN 1408 --- [main] [http-nio-8080-exec-1] [                                                 ] o.s.w.s.h.HandlerMappingIntrospector     : Cache miss for REQUEST dispatch to '/api/candyShop/crear' (previous null). Performing CorsConfiguration lookup. This is logged once only at WARN level, and every time at TRACE.
+2025-10-28T12:54:08.209+01:00  INFO 18692 --- [main] [main] com.candyshop.main.MainApplication       : Starting MainApplication using Java 17.0.16 with PID 18692 (C:\DAW\candyshop\main\target\classes started by oiram in C:\DAW\candyshop)
+2025-10-28T12:54:08.212+01:00  INFO 18692 --- [main] [main] com.candyshop.main.MainApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-10-28T12:54:09.068+01:00  INFO 18692 --- [main] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-28T12:54:09.147+01:00  INFO 18692 --- [main] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 66 ms. Found 1 JPA repository interface.
+2025-10-28T12:54:09.875+01:00  INFO 18692 --- [main] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-28T12:54:09.887+01:00  INFO 18692 --- [main] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-28T12:54:09.887+01:00  INFO 18692 --- [main] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-10-28T12:54:09.977+01:00  INFO 18692 --- [main] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-28T12:54:09.977+01:00  INFO 18692 --- [main] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1701 ms
+2025-10-28T12:54:10.210+01:00  INFO 18692 --- [main] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-28T12:54:10.312+01:00  INFO 18692 --- [main] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-10-28T12:54:10.367+01:00  INFO 18692 --- [main] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-28T12:54:10.569+01:00  INFO 18692 --- [main] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-28T12:54:10.592+01:00  INFO 18692 --- [main] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-28T12:54:10.900+01:00  INFO 18692 --- [main] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2bdb5e0f
+2025-10-28T12:54:10.902+01:00  INFO 18692 --- [main] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-28T12:54:10.953+01:00  WARN 18692 --- [main] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-28T12:54:11.723+01:00  INFO 18692 --- [main] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-28T12:54:11.767+01:00  INFO 18692 --- [main] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-28T12:54:11.985+01:00  WARN 18692 --- [main] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-28T12:54:12.429+01:00  INFO 18692 --- [main] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2025-10-28T12:54:12.440+01:00  INFO 18692 --- [main] [main] com.candyshop.main.MainApplication       : Started MainApplication in 4.656 seconds (process running for 5.004)
+2025-10-28T12:54:24.877+01:00  INFO 18692 --- [main] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-28T12:54:24.877+01:00  INFO 18692 --- [main] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-28T12:54:24.878+01:00  INFO 18692 --- [main] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-10-28T13:17:38.086+01:00  INFO 16380 --- [main] [main] com.candyshop.main.MainApplication       : Starting MainApplication using Java 17.0.16 with PID 16380 (C:\DAW\candyshop\main\target\classes started by oiram in C:\DAW\candyshop)
+2025-10-28T13:17:38.088+01:00  INFO 16380 --- [main] [main] com.candyshop.main.MainApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-10-28T13:17:38.835+01:00  INFO 16380 --- [main] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-28T13:17:38.901+01:00  INFO 16380 --- [main] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 1 JPA repository interface.
+2025-10-28T13:17:39.557+01:00  INFO 16380 --- [main] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-28T13:17:39.568+01:00  INFO 16380 --- [main] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-28T13:17:39.568+01:00  INFO 16380 --- [main] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-10-28T13:17:39.656+01:00  INFO 16380 --- [main] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-28T13:17:39.656+01:00  INFO 16380 --- [main] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1505 ms
+2025-10-28T13:17:39.882+01:00  INFO 16380 --- [main] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-28T13:17:39.953+01:00  INFO 16380 --- [main] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-10-28T13:17:39.990+01:00  INFO 16380 --- [main] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-28T13:17:40.196+01:00  INFO 16380 --- [main] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-28T13:17:40.218+01:00  INFO 16380 --- [main] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-28T13:17:40.532+01:00  INFO 16380 --- [main] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@20b54cfe
+2025-10-28T13:17:40.534+01:00  INFO 16380 --- [main] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-28T13:17:40.581+01:00  WARN 16380 --- [main] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-28T13:17:41.343+01:00  INFO 16380 --- [main] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-28T13:17:41.390+01:00  INFO 16380 --- [main] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-28T13:17:41.648+01:00  WARN 16380 --- [main] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-28T13:17:42.107+01:00  INFO 16380 --- [main] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2025-10-28T13:17:42.120+01:00  INFO 16380 --- [main] [main] com.candyshop.main.MainApplication       : Started MainApplication in 4.472 seconds (process running for 4.779)
+2025-10-28T13:18:09.306+01:00  INFO 16380 --- [main] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-28T13:18:09.307+01:00  INFO 16380 --- [main] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-28T13:18:09.307+01:00  INFO 16380 --- [main] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-10-28T13:31:14.955+01:00  INFO 14164 --- [main] [main] com.candyshop.main.MainApplication       : Starting MainApplication using Java 17.0.16 with PID 14164 (C:\DAW\candyshop\main\target\classes started by oiram in C:\DAW\candyshop)
+2025-10-28T13:31:14.957+01:00  INFO 14164 --- [main] [main] com.candyshop.main.MainApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-10-28T13:31:15.698+01:00  INFO 14164 --- [main] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-28T13:31:15.773+01:00  INFO 14164 --- [main] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 63 ms. Found 1 JPA repository interface.
+2025-10-28T13:31:16.449+01:00  INFO 14164 --- [main] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-28T13:31:16.461+01:00  INFO 14164 --- [main] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-28T13:31:16.462+01:00  INFO 14164 --- [main] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-10-28T13:31:16.550+01:00  INFO 14164 --- [main] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-28T13:31:16.550+01:00  INFO 14164 --- [main] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1530 ms
+2025-10-28T13:31:16.818+01:00  INFO 14164 --- [main] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-28T13:31:16.939+01:00  INFO 14164 --- [main] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-10-28T13:31:16.973+01:00  INFO 14164 --- [main] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-28T13:31:17.202+01:00  INFO 14164 --- [main] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-28T13:31:17.227+01:00  INFO 14164 --- [main] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-28T13:31:17.550+01:00  INFO 14164 --- [main] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2bdb5e0f
+2025-10-28T13:31:17.552+01:00  INFO 14164 --- [main] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-28T13:31:17.607+01:00  WARN 14164 --- [main] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-28T13:31:18.383+01:00  INFO 14164 --- [main] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-28T13:31:18.431+01:00  INFO 14164 --- [main] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-28T13:31:18.665+01:00  WARN 14164 --- [main] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-28T13:31:19.104+01:00  INFO 14164 --- [main] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2025-10-28T13:31:19.113+01:00  INFO 14164 --- [main] [main] com.candyshop.main.MainApplication       : Started MainApplication in 4.61 seconds (process running for 4.936)
+2025-10-28T13:31:43.240+01:00  INFO 14164 --- [main] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-28T13:31:43.240+01:00  INFO 14164 --- [main] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-28T13:31:43.241+01:00  INFO 14164 --- [main] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-10-28T13:32:18.686+01:00  INFO 14952 --- [main] [main] com.candyshop.main.MainApplication       : Starting MainApplication using Java 17.0.16 with PID 14952 (C:\DAW\candyshop\main\target\classes started by oiram in C:\DAW\candyshop)
+2025-10-28T13:32:18.691+01:00  INFO 14952 --- [main] [main] com.candyshop.main.MainApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-10-28T13:32:19.525+01:00  INFO 14952 --- [main] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-28T13:32:19.603+01:00  INFO 14952 --- [main] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 61 ms. Found 1 JPA repository interface.
+2025-10-28T13:32:20.256+01:00  INFO 14952 --- [main] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-28T13:32:20.265+01:00  INFO 14952 --- [main] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-28T13:32:20.265+01:00  INFO 14952 --- [main] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-10-28T13:32:20.350+01:00  INFO 14952 --- [main] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-28T13:32:20.350+01:00  INFO 14952 --- [main] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1600 ms
+2025-10-28T13:32:20.553+01:00  INFO 14952 --- [main] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-28T13:32:20.657+01:00  INFO 14952 --- [main] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-10-28T13:32:20.696+01:00  INFO 14952 --- [main] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-28T13:32:20.884+01:00  INFO 14952 --- [main] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-28T13:32:20.907+01:00  INFO 14952 --- [main] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-28T13:32:21.214+01:00  INFO 14952 --- [main] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@384472bf
+2025-10-28T13:32:21.216+01:00  INFO 14952 --- [main] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-28T13:32:21.263+01:00  WARN 14952 --- [main] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-28T13:32:22.045+01:00  INFO 14952 --- [main] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-28T13:32:22.092+01:00  INFO 14952 --- [main] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-28T13:32:22.428+01:00  WARN 14952 --- [main] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-28T13:32:23.075+01:00  INFO 14952 --- [main] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2025-10-28T13:32:23.086+01:00  INFO 14952 --- [main] [main] com.candyshop.main.MainApplication       : Started MainApplication in 4.838 seconds (process running for 5.152)
+2025-10-28T13:32:26.558+01:00  INFO 14952 --- [main] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-28T13:32:26.559+01:00  INFO 14952 --- [main] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-28T13:32:26.560+01:00  INFO 14952 --- [main] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-10-28T13:37:54.112+01:00  INFO 12548 --- [main] [main] com.candyshop.main.MainApplication       : Starting MainApplication using Java 17.0.16 with PID 12548 (C:\DAW\candyshop\main\target\classes started by oiram in C:\DAW\candyshop)
+2025-10-28T13:37:54.115+01:00  INFO 12548 --- [main] [main] com.candyshop.main.MainApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-10-28T13:37:54.871+01:00  INFO 12548 --- [main] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-28T13:37:54.941+01:00  INFO 12548 --- [main] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 56 ms. Found 1 JPA repository interface.
+2025-10-28T13:37:55.635+01:00  INFO 12548 --- [main] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-28T13:37:55.639+01:00  INFO 12548 --- [main] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-28T13:37:55.645+01:00  INFO 12548 --- [main] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-10-28T13:37:55.741+01:00  INFO 12548 --- [main] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-28T13:37:55.741+01:00  INFO 12548 --- [main] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1563 ms
+2025-10-28T13:37:56.014+01:00  INFO 12548 --- [main] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-28T13:37:56.104+01:00  INFO 12548 --- [main] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-10-28T13:37:56.149+01:00  INFO 12548 --- [main] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-28T13:37:56.365+01:00  INFO 12548 --- [main] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-28T13:37:56.392+01:00  INFO 12548 --- [main] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-28T13:37:56.693+01:00  INFO 12548 --- [main] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3a588b5f
+2025-10-28T13:37:56.693+01:00  INFO 12548 --- [main] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-28T13:37:56.745+01:00  WARN 12548 --- [main] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-28T13:37:57.535+01:00  INFO 12548 --- [main] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-28T13:37:57.585+01:00  INFO 12548 --- [main] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-28T13:37:57.838+01:00  WARN 12548 --- [main] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-28T13:37:58.283+01:00  INFO 12548 --- [main] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2025-10-28T13:37:58.292+01:00  INFO 12548 --- [main] [main] com.candyshop.main.MainApplication       : Started MainApplication in 4.588 seconds (process running for 4.915)
+2025-10-28T13:38:10.124+01:00  INFO 12548 --- [main] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-28T13:38:10.124+01:00  INFO 12548 --- [main] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-28T13:38:10.125+01:00  INFO 12548 --- [main] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-10-28T13:38:56.512+01:00  INFO 2184 --- [main] [main] com.candyshop.main.MainApplication       : Starting MainApplication using Java 17.0.16 with PID 2184 (C:\DAW\candyshop\main\target\classes started by oiram in C:\DAW\candyshop)
+2025-10-28T13:38:56.514+01:00  INFO 2184 --- [main] [main] com.candyshop.main.MainApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-10-28T13:38:57.329+01:00  INFO 2184 --- [main] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-28T13:38:57.394+01:00  INFO 2184 --- [main] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52 ms. Found 1 JPA repository interface.
+2025-10-28T13:38:58.028+01:00  INFO 2184 --- [main] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-28T13:38:58.038+01:00  INFO 2184 --- [main] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-28T13:38:58.038+01:00  INFO 2184 --- [main] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-10-28T13:38:58.120+01:00  INFO 2184 --- [main] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-28T13:38:58.120+01:00  INFO 2184 --- [main] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1546 ms
+2025-10-28T13:38:58.332+01:00  INFO 2184 --- [main] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-28T13:38:58.414+01:00  INFO 2184 --- [main] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-10-28T13:38:58.470+01:00  INFO 2184 --- [main] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-28T13:38:58.655+01:00  INFO 2184 --- [main] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-28T13:38:58.677+01:00  INFO 2184 --- [main] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-28T13:38:58.979+01:00  INFO 2184 --- [main] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@656ec00d
+2025-10-28T13:38:58.982+01:00  INFO 2184 --- [main] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-28T13:38:59.030+01:00  WARN 2184 --- [main] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-28T13:38:59.757+01:00  INFO 2184 --- [main] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-28T13:38:59.803+01:00  INFO 2184 --- [main] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-28T13:39:00.045+01:00  WARN 2184 --- [main] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-28T13:39:00.486+01:00  INFO 2184 --- [main] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2025-10-28T13:39:00.495+01:00  INFO 2184 --- [main] [main] com.candyshop.main.MainApplication       : Started MainApplication in 4.389 seconds (process running for 4.694)
+2025-10-28T13:40:31.744+01:00  INFO 2184 --- [main] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-28T13:40:31.744+01:00  INFO 2184 --- [main] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-28T13:40:31.745+01:00  INFO 2184 --- [main] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-10-28T13:42:31.636+01:00  INFO 6488 --- [main] [main] com.candyshop.main.MainApplication       : Starting MainApplication using Java 17.0.16 with PID 6488 (C:\DAW\candyshop\main\target\classes started by oiram in C:\DAW\candyshop)
+2025-10-28T13:42:31.640+01:00  INFO 6488 --- [main] [main] com.candyshop.main.MainApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-10-28T13:42:32.422+01:00  INFO 6488 --- [main] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-28T13:42:32.501+01:00  INFO 6488 --- [main] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 65 ms. Found 1 JPA repository interface.
+2025-10-28T13:42:33.162+01:00  INFO 6488 --- [main] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-28T13:42:33.175+01:00  INFO 6488 --- [main] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-28T13:42:33.175+01:00  INFO 6488 --- [main] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-10-28T13:42:33.278+01:00  INFO 6488 --- [main] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-28T13:42:33.279+01:00  INFO 6488 --- [main] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1566 ms
+2025-10-28T13:42:33.510+01:00  INFO 6488 --- [main] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-28T13:42:33.596+01:00  INFO 6488 --- [main] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-10-28T13:42:33.654+01:00  INFO 6488 --- [main] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-28T13:42:33.867+01:00  INFO 6488 --- [main] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-28T13:42:33.891+01:00  INFO 6488 --- [main] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-28T13:42:34.198+01:00  INFO 6488 --- [main] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@656ec00d
+2025-10-28T13:42:34.200+01:00  INFO 6488 --- [main] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-28T13:42:34.249+01:00  WARN 6488 --- [main] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-28T13:42:35.004+01:00  INFO 6488 --- [main] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-28T13:42:35.047+01:00  INFO 6488 --- [main] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-28T13:42:35.288+01:00  WARN 6488 --- [main] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-28T13:42:35.799+01:00  INFO 6488 --- [main] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2025-10-28T13:42:35.809+01:00  INFO 6488 --- [main] [main] com.candyshop.main.MainApplication       : Started MainApplication in 4.635 seconds (process running for 4.953)
+2025-10-28T13:42:47.558+01:00  INFO 6488 --- [main] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-28T13:42:47.558+01:00  INFO 6488 --- [main] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-28T13:42:47.559+01:00  INFO 6488 --- [main] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-10-28T13:44:14.141+01:00  INFO 11588 --- [main] [main] com.candyshop.main.MainApplication       : Starting MainApplication using Java 17.0.16 with PID 11588 (C:\DAW\candyshop\main\target\classes started by oiram in C:\DAW\candyshop)
+2025-10-28T13:44:14.144+01:00  INFO 11588 --- [main] [main] com.candyshop.main.MainApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-10-28T13:44:14.945+01:00  INFO 11588 --- [main] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-28T13:44:15.020+01:00  INFO 11588 --- [main] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58 ms. Found 1 JPA repository interface.
+2025-10-28T13:44:15.753+01:00  INFO 11588 --- [main] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-28T13:44:15.768+01:00  INFO 11588 --- [main] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-28T13:44:15.768+01:00  INFO 11588 --- [main] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-10-28T13:44:15.869+01:00  INFO 11588 --- [main] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-28T13:44:15.869+01:00  INFO 11588 --- [main] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1660 ms
+2025-10-28T13:44:16.157+01:00  INFO 11588 --- [main] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-28T13:44:16.287+01:00  INFO 11588 --- [main] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-10-28T13:44:16.328+01:00  INFO 11588 --- [main] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-28T13:44:16.538+01:00  INFO 11588 --- [main] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-28T13:44:16.560+01:00  INFO 11588 --- [main] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-28T13:44:16.868+01:00  INFO 11588 --- [main] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@20b54cfe
+2025-10-28T13:44:16.870+01:00  INFO 11588 --- [main] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-28T13:44:16.916+01:00  WARN 11588 --- [main] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-28T13:44:17.652+01:00  INFO 11588 --- [main] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-28T13:44:17.694+01:00  INFO 11588 --- [main] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-28T13:44:17.950+01:00  WARN 11588 --- [main] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-28T13:44:18.457+01:00  INFO 11588 --- [main] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2025-10-28T13:44:18.466+01:00  INFO 11588 --- [main] [main] com.candyshop.main.MainApplication       : Started MainApplication in 4.747 seconds (process running for 5.101)
+2025-10-28T13:54:15.559+01:00  INFO 11588 --- [main] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-28T13:54:15.560+01:00  INFO 11588 --- [main] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-28T13:54:15.561+01:00  INFO 11588 --- [main] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-10-28T13:54:22.664+01:00  INFO 1120 --- [main] [main] com.candyshop.main.MainApplication       : Starting MainApplication using Java 17.0.16 with PID 1120 (C:\DAW\candyshop\main\target\classes started by oiram in C:\DAW\candyshop)
+2025-10-28T13:54:22.667+01:00  INFO 1120 --- [main] [main] com.candyshop.main.MainApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-10-28T13:54:23.633+01:00  INFO 1120 --- [main] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-28T13:54:23.727+01:00  INFO 1120 --- [main] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 80 ms. Found 1 JPA repository interface.
+2025-10-28T13:54:24.587+01:00  INFO 1120 --- [main] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-28T13:54:24.600+01:00  INFO 1120 --- [main] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-28T13:54:24.601+01:00  INFO 1120 --- [main] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-10-28T13:54:24.740+01:00  INFO 1120 --- [main] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-28T13:54:24.740+01:00  INFO 1120 --- [main] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1994 ms
+2025-10-28T13:54:24.989+01:00  INFO 1120 --- [main] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-28T13:54:25.113+01:00  INFO 1120 --- [main] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-10-28T13:54:25.160+01:00  INFO 1120 --- [main] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-28T13:54:25.408+01:00  INFO 1120 --- [main] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-28T13:54:25.433+01:00  INFO 1120 --- [main] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-28T13:54:25.800+01:00  INFO 1120 --- [main] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6ba6557e
+2025-10-28T13:54:25.801+01:00  INFO 1120 --- [main] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-28T13:54:25.874+01:00  WARN 1120 --- [main] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-28T13:54:26.815+01:00  INFO 1120 --- [main] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-28T13:54:26.868+01:00  INFO 1120 --- [main] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-28T13:54:27.267+01:00  WARN 1120 --- [main] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-28T13:54:27.998+01:00  INFO 1120 --- [main] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2025-10-28T13:54:28.010+01:00  INFO 1120 --- [main] [main] com.candyshop.main.MainApplication       : Started MainApplication in 5.877 seconds (process running for 6.252)
+2025-10-28T13:54:33.905+01:00  INFO 1120 --- [main] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-28T13:54:33.906+01:00  INFO 1120 --- [main] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-28T13:54:33.907+01:00  INFO 1120 --- [main] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-10-28T15:13:48.389+01:00  WARN 1120 --- [main] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h19m22s479ms661µs800ns).
+2025-10-28T17:14:38.433+01:00  INFO 28752 --- [main] [main] com.candyshop.main.MainApplication       : Starting MainApplication using Java 17.0.16 with PID 28752 (C:\DAW\candyshop\main\target\classes started by oiram in C:\DAW\candyshop)
+2025-10-28T17:14:38.447+01:00  INFO 28752 --- [main] [main] com.candyshop.main.MainApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-10-28T17:14:40.965+01:00  INFO 28752 --- [main] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-28T17:14:41.121+01:00  INFO 28752 --- [main] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 133 ms. Found 1 JPA repository interface.
+2025-10-28T17:14:42.849+01:00  INFO 28752 --- [main] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-28T17:14:42.870+01:00  INFO 28752 --- [main] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-28T17:14:42.870+01:00  INFO 28752 --- [main] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-10-28T17:14:43.079+01:00  INFO 28752 --- [main] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-28T17:14:43.082+01:00  INFO 28752 --- [main] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4481 ms
+2025-10-28T17:14:43.619+01:00  INFO 28752 --- [main] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-28T17:14:43.924+01:00  INFO 28752 --- [main] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-10-28T17:14:44.018+01:00  INFO 28752 --- [main] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-28T17:14:44.532+01:00  INFO 28752 --- [main] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-28T17:14:44.585+01:00  INFO 28752 --- [main] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-28T17:14:45.324+01:00  INFO 28752 --- [main] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@20b54cfe
+2025-10-28T17:14:45.331+01:00  INFO 28752 --- [main] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-28T17:14:45.539+01:00  WARN 28752 --- [main] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-28T17:14:47.627+01:00  INFO 28752 --- [main] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-28T17:14:47.748+01:00  INFO 28752 --- [main] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-28T17:14:48.375+01:00  WARN 28752 --- [main] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-28T17:14:49.477+01:00  INFO 28752 --- [main] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2025-10-28T17:14:49.499+01:00  INFO 28752 --- [main] [main] com.candyshop.main.MainApplication       : Started MainApplication in 12.245 seconds (process running for 13.181)
+2025-10-28T17:14:54.926+01:00  INFO 28752 --- [main] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-28T17:14:54.926+01:00  INFO 28752 --- [main] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-28T17:14:54.930+01:00  INFO 28752 --- [main] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-10-28T17:21:25.430+01:00  INFO 16780 --- [main] [main] com.candyshop.main.MainApplication       : Starting MainApplication using Java 17.0.16 with PID 16780 (C:\DAW\candyshop\main\target\classes started by oiram in C:\DAW\candyshop)
+2025-10-28T17:21:25.434+01:00  INFO 16780 --- [main] [main] com.candyshop.main.MainApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-10-28T17:21:27.244+01:00  INFO 16780 --- [main] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-28T17:21:27.403+01:00  INFO 16780 --- [main] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 134 ms. Found 1 JPA repository interface.
+2025-10-28T17:21:28.813+01:00  INFO 16780 --- [main] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-28T17:21:28.844+01:00  INFO 16780 --- [main] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-28T17:21:28.844+01:00  INFO 16780 --- [main] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-10-28T17:21:29.019+01:00  INFO 16780 --- [main] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-28T17:21:29.019+01:00  INFO 16780 --- [main] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3458 ms
+2025-10-28T17:21:29.545+01:00  INFO 16780 --- [main] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-28T17:21:29.761+01:00  INFO 16780 --- [main] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-10-28T17:21:29.852+01:00  INFO 16780 --- [main] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-28T17:21:30.313+01:00  INFO 16780 --- [main] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-28T17:21:30.357+01:00  INFO 16780 --- [main] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-28T17:21:30.994+01:00  INFO 16780 --- [main] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4a6a6a69
+2025-10-28T17:21:31.003+01:00  INFO 16780 --- [main] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-28T17:21:31.138+01:00  WARN 16780 --- [main] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-28T17:21:32.818+01:00  INFO 16780 --- [main] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-28T17:21:32.922+01:00  INFO 16780 --- [main] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-28T17:21:33.638+01:00  WARN 16780 --- [main] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-28T17:21:34.955+01:00  INFO 16780 --- [main] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2025-10-28T17:21:34.978+01:00  INFO 16780 --- [main] [main] com.candyshop.main.MainApplication       : Started MainApplication in 10.588 seconds (process running for 11.412)
+2025-10-28T17:34:12.579+01:00  INFO 26228 --- [main] [main] com.candyshop.main.MainApplication       : Starting MainApplication using Java 17.0.16 with PID 26228 (C:\DAW\candyshop\main\target\classes started by oiram in C:\DAW\candyshop)
+2025-10-28T17:34:12.587+01:00  INFO 26228 --- [main] [main] com.candyshop.main.MainApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-10-28T17:34:14.407+01:00  INFO 26228 --- [main] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-28T17:34:14.539+01:00  INFO 26228 --- [main] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 110 ms. Found 1 JPA repository interface.
+2025-10-28T17:34:16.054+01:00  INFO 26228 --- [main] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-28T17:34:16.080+01:00  INFO 26228 --- [main] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-28T17:34:16.081+01:00  INFO 26228 --- [main] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-10-28T17:34:16.272+01:00  INFO 26228 --- [main] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-28T17:34:16.273+01:00  INFO 26228 --- [main] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3542 ms
+2025-10-28T17:34:16.899+01:00  INFO 26228 --- [main] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-28T17:34:17.129+01:00  INFO 26228 --- [main] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-10-28T17:34:17.207+01:00  INFO 26228 --- [main] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-28T17:34:17.699+01:00  INFO 26228 --- [main] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-28T17:34:17.754+01:00  INFO 26228 --- [main] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-28T17:34:18.403+01:00  INFO 26228 --- [main] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3a588b5f
+2025-10-28T17:34:18.409+01:00  INFO 26228 --- [main] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-28T17:34:18.533+01:00  WARN 26228 --- [main] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-28T17:34:20.310+01:00  INFO 26228 --- [main] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-28T17:34:20.410+01:00  INFO 26228 --- [main] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-28T17:34:21.088+01:00  WARN 26228 --- [main] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-28T17:34:22.423+01:00  INFO 26228 --- [main] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2025-10-28T17:34:22.443+01:00  INFO 26228 --- [main] [main] com.candyshop.main.MainApplication       : Started MainApplication in 10.916 seconds (process running for 11.726)
+2025-10-28T17:35:01.925+01:00  INFO 26228 --- [main] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-28T17:35:01.926+01:00  INFO 26228 --- [main] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-28T17:35:01.929+01:00  INFO 26228 --- [main] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-10-28T17:36:46.181+01:00  INFO 23532 --- [main] [main] com.candyshop.main.MainApplication       : Starting MainApplication using Java 17.0.16 with PID 23532 (C:\DAW\candyshop\main\target\classes started by oiram in C:\DAW\candyshop)
+2025-10-28T17:36:46.189+01:00  INFO 23532 --- [main] [main] com.candyshop.main.MainApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-10-28T17:36:48.013+01:00  INFO 23532 --- [main] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-28T17:36:48.211+01:00  INFO 23532 --- [main] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 175 ms. Found 1 JPA repository interface.
+2025-10-28T17:36:49.720+01:00  INFO 23532 --- [main] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-28T17:36:49.740+01:00  INFO 23532 --- [main] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-28T17:36:49.740+01:00  INFO 23532 --- [main] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-10-28T17:36:49.937+01:00  INFO 23532 --- [main] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-28T17:36:49.937+01:00  INFO 23532 --- [main] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3623 ms
+2025-10-28T17:36:50.514+01:00  INFO 23532 --- [main] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-28T17:36:50.669+01:00  INFO 23532 --- [main] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-10-28T17:36:50.744+01:00  INFO 23532 --- [main] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-28T17:36:51.189+01:00  INFO 23532 --- [main] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-28T17:36:51.241+01:00  INFO 23532 --- [main] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-28T17:36:51.906+01:00  INFO 23532 --- [main] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@68e47e7
+2025-10-28T17:36:51.909+01:00  INFO 23532 --- [main] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-28T17:36:52.019+01:00  WARN 23532 --- [main] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-28T17:36:53.695+01:00  INFO 23532 --- [main] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-28T17:36:53.796+01:00  INFO 23532 --- [main] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-28T17:36:54.424+01:00  WARN 23532 --- [main] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-28T17:36:55.681+01:00  INFO 23532 --- [main] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2025-10-28T17:36:55.703+01:00  INFO 23532 --- [main] [main] com.candyshop.main.MainApplication       : Started MainApplication in 10.507 seconds (process running for 11.332)
+2025-10-28T17:37:29.302+01:00  INFO 23532 --- [main] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-28T17:37:29.302+01:00  INFO 23532 --- [main] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-28T17:37:29.306+01:00  INFO 23532 --- [main] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2025-10-28T17:42:34.787+01:00  INFO 26356 --- [main] [main] com.candyshop.main.MainApplication       : Starting MainApplication using Java 17.0.16 with PID 26356 (C:\DAW\candyshop\main\target\classes started by oiram in C:\DAW\candyshop)
+2025-10-28T17:42:34.794+01:00  INFO 26356 --- [main] [main] com.candyshop.main.MainApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-10-28T17:42:36.578+01:00  INFO 26356 --- [main] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-28T17:42:36.764+01:00  INFO 26356 --- [main] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 145 ms. Found 1 JPA repository interface.
+2025-10-28T17:42:38.512+01:00  INFO 26356 --- [main] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-28T17:42:38.536+01:00  INFO 26356 --- [main] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-28T17:42:38.537+01:00  INFO 26356 --- [main] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-10-28T17:42:38.725+01:00  INFO 26356 --- [main] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-28T17:42:38.727+01:00  INFO 26356 --- [main] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3756 ms
+2025-10-28T17:42:39.206+01:00  INFO 26356 --- [main] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-28T17:42:39.401+01:00  INFO 26356 --- [main] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-10-28T17:42:39.475+01:00  INFO 26356 --- [main] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-28T17:42:39.957+01:00  INFO 26356 --- [main] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-28T17:42:40.017+01:00  INFO 26356 --- [main] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-28T17:42:40.698+01:00  INFO 26356 --- [main] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@18d30e7
+2025-10-28T17:42:40.703+01:00  INFO 26356 --- [main] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-28T17:42:40.896+01:00  WARN 26356 --- [main] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-28T17:42:42.542+01:00  INFO 26356 --- [main] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-28T17:42:42.642+01:00  INFO 26356 --- [main] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-28T17:42:43.317+01:00  WARN 26356 --- [main] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-28T17:42:43.639+01:00 TRACE 26356 --- [main] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.c.m.a.ApiCandyShopController:
+	{DELETE [/api/candyShop/{producto_id}]}: deleteProducto(Long)
+	{PUT [/api/candyShop/{producto_id}]}: updateProducto(Long,Producto)
+	{POST [/api/candyShop/crear]}: createProducto(Producto)
+	{GET [/api/candyShop/{producto_id}]}: getProductoById(Long)
+	{GET [/api/candyShop]}: getAllProductos()
+2025-10-28T17:42:43.658+01:00 TRACE 26356 --- [main] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.c.m.c.productController:
+	{GET [/productos]}: listProducts(Model)
+	{GET [/productos/editar/{producto_id}]}: editProduct(Long,Model)
+	{POST [/productos/modificar]}: modifyProduct(Producto)
+	{GET [/productos/nuevo]}: newProduct(Model)
+	{POST [/productos/crear]}: createProduct(Producto)
+	{GET [/productos/eliminar/{producto_id}]}: removeProduct(Long,RedirectAttributes)
+2025-10-28T17:42:43.668+01:00 TRACE 26356 --- [main] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.c.m.c.TestController:
+	{GET [/test]}: test()
+2025-10-28T17:42:43.674+01:00 TRACE 26356 --- [main] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2025-10-28T17:42:43.693+01:00 DEBUG 26356 --- [main] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 14 mappings in 'requestMappingHandlerMapping'
+2025-10-28T17:42:43.717+01:00 DEBUG 26356 --- [main] [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Detected 0 mappings in 'beanNameHandlerMapping'
+2025-10-28T17:42:43.924+01:00 TRACE 26356 --- [main] [main] o.s.w.s.f.support.RouterFunctionMapping  : 0 RouterFunction(s) in 'routerFunctionMapping'
+2025-10-28T17:42:43.972+01:00 TRACE 26356 --- [main] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/webjars/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2025-10-28T17:42:43.974+01:00 TRACE 26356 --- [main] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-10-28T17:42:43.975+01:00 DEBUG 26356 --- [main] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-10-28T17:42:44.106+01:00 DEBUG 26356 --- [main] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-10-28T17:42:44.222+01:00 DEBUG 26356 --- [main] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-10-28T17:42:44.640+01:00  INFO 26356 --- [main] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2025-10-28T17:42:44.665+01:00  INFO 26356 --- [main] [main] com.candyshop.main.MainApplication       : Started MainApplication in 10.934 seconds (process running for 11.793)
+2025-10-28T17:44:25.962+01:00  INFO 26356 --- [main] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-28T17:44:25.962+01:00  INFO 26356 --- [main] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-28T17:44:25.965+01:00 TRACE 26356 --- [main] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.multipart.support.StandardServletMultipartResolver@3606eee9
+2025-10-28T17:44:25.965+01:00 TRACE 26356 --- [main] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver@7efba9b9
+2025-10-28T17:44:25.965+01:00 TRACE 26356 --- [main] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.theme.FixedThemeResolver@1b5d1d9
+2025-10-28T17:44:25.967+01:00 TRACE 26356 --- [main] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected DefaultRequestToViewNameTranslator
+2025-10-28T17:44:25.967+01:00 TRACE 26356 --- [main] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected SessionFlashMapManager
+2025-10-28T17:44:25.967+01:00 DEBUG 26356 --- [main] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-10-28T17:44:25.970+01:00  INFO 26356 --- [main] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-10-28T17:44:25.991+01:00 TRACE 26356 --- [main] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/productos", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2025-10-28T17:44:26.019+01:00 TRACE 26356 --- [main] [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.candyshop.main.controller.productController#listProducts(Model)
+2025-10-28T17:44:26.060+01:00 TRACE 26356 --- [main] [http-nio-8080-exec-1] o.s.web.method.HandlerMethod             : Arguments: [{}]
+2025-10-28T17:44:26.435+01:00 TRACE 26356 --- [main] [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2025-10-28T17:44:26.452+01:00 DEBUG 26356 --- [main] [http-nio-8080-exec-1] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2025-10-28T17:44:26.452+01:00 TRACE 26356 --- [main] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Rendering view [org.springframework.web.servlet.view.InternalResourceView: name 'listProduct'; URL [listProduct]] 
+2025-10-28T17:44:26.452+01:00 DEBUG 26356 --- [main] [http-nio-8080-exec-1] o.s.w.servlet.view.InternalResourceView  : View name 'listProduct', model {productos=[Producto(producto_id=1, alergenos=Nueces, descripcion=Delicioso chocolate con nueces, nombre=Chocolate con Nueces, peso_gramos=150.0, precio=3.75)]}
+2025-10-28T17:44:26.464+01:00 DEBUG 26356 --- [main] [http-nio-8080-exec-1] o.s.w.servlet.view.InternalResourceView  : Forwarding to [listProduct]
+2025-10-28T17:44:26.475+01:00 TRACE 26356 --- [main] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : "FORWARD" dispatch for GET "/listProduct", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2025-10-28T17:44:26.483+01:00 TRACE 26356 --- [main] [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to HandlerExecutionChain with [ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]] and 4 interceptors
+2025-10-28T17:44:26.490+01:00 DEBUG 26356 --- [main] [http-nio-8080-exec-1] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2025-10-28T17:44:26.504+01:00 DEBUG 26356 --- [main] [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource listProduct.]
+2025-10-28T17:44:26.504+01:00 TRACE 26356 --- [main] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2025-10-28T17:44:26.507+01:00 DEBUG 26356 --- [main] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Exiting from "FORWARD" dispatch, status 404, headers={masked}
+2025-10-28T17:44:26.512+01:00 DEBUG 26356 --- [main] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND, headers={masked}
+2025-10-28T17:44:26.515+01:00 TRACE 26356 --- [main] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2025-10-28T17:44:26.519+01:00 TRACE 26356 --- [main] [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 matching mappings: [{ [/error], produces [text/html]}, { [/error]}]
+2025-10-28T17:44:26.519+01:00 TRACE 26356 --- [main] [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#errorHtml(HttpServletRequest, HttpServletResponse)
+2025-10-28T17:44:26.520+01:00 TRACE 26356 --- [main] [http-nio-8080-exec-1] o.s.web.method.HandlerMethod             : Arguments: [org.apache.catalina.core.ApplicationHttpRequest@b4f3763, org.apache.catalina.connector.ResponseFacade@4ec5738c]
+2025-10-28T17:44:26.544+01:00 TRACE 26356 --- [main] [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2025-10-28T17:44:26.547+01:00 DEBUG 26356 --- [main] [http-nio-8080-exec-1] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, text/html;q=0.8]
+2025-10-28T17:44:26.547+01:00 TRACE 26356 --- [main] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Rendering view [org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration$StaticView@72a61e61] 
+2025-10-28T17:44:26.561+01:00 DEBUG 26356 --- [main] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404, headers={masked}
