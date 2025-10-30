@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.candyshop.main.model.Productos;
-import com.candyshop.main.model.Proveedor;
+
 import com.candyshop.main.repository.ProductosRepository;
 
 @RestController
