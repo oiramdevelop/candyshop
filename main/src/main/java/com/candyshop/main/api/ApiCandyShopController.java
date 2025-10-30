@@ -10,8 +10,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.candyshop.main.model.Productos;
-import com.candyshop.main.repository.ProductosRepository;
+
+import com.candyshop.main.model.Proveedor;
+import com.candyshop.main.repository.ProveedorRepository;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,58 +23,58 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 
 @RestController
-@RequestMapping("/api/candyShop")
+@RequestMapping("/api/proveedores")
 public class ApiCandyShopController {
     
     @Autowired
-    private ProductosRepository productoRepository;
+    private ProveedorRepository proveedorRepository;
 
     @GetMapping
-    public List<Productos> getAllProductos(){
-        return productoRepository.findAll();
+    public List<Proveedor> getlALLProveedor(){
+        return proveedorRepository.findAll();
     }
 
     // CORREGIDO: Usar el mismo nombre en @PathVariable
-    @GetMapping("/{producto_id}")
-    public ResponseEntity<Productos> getProductoById(@PathVariable("producto_id") Long id) {
-        return productoRepository.findById(id)
-                .map(producto -> ResponseEntity.ok().body(producto))
+    @GetMapping("/{proveedor_id}")
+    public ResponseEntity<Proveedor> getProductoById(@PathVariable("proveedor_id") Long id) {
+        return proveedorRepository.findById(id)
+                .map(proveedor -> ResponseEntity.ok().body(proveedor))
                 .orElse(ResponseEntity.notFound().build());
     }
 
     @PostMapping("/crear")
-    public Productos createProducto(@RequestBody Productos producto) {
-        return productoRepository.save(producto);
+    public Proveedor createProducto(@RequestBody Proveedor proveedor) {
+        return proveedorRepository.save(proveedor);
     }
 
-    @PutMapping("/{producto_id}")
-    public ResponseEntity<Productos> updateProducto(@PathVariable("producto_id") Long id, @RequestBody Productos productoRecibido) {
+    @PutMapping("/{proveedor_id}")
+    public ResponseEntity<Proveedor> updateProducto(@PathVariable("proveedor_id") Long id, @RequestBody Proveedor proveedorRecibido) {
 
-        Optional<Productos> productoBD = productoRepository.findById(id);
+        Optional<Proveedor> proveedorBD = proveedorRepository.findById(id);
 
-        if (!productoBD.isPresent())
+        if (!proveedorBD.isPresent())
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 
-        Productos producto = productoBD.get();
+        Proveedor proveedor = proveedorBD.get();
 
         // CORREGIDO: setDescripcion ahora recibe la descripción correcta
-        producto.setAlergenos(productoRecibido.getAlergenos());
-        producto.setDescripcion(productoRecibido.getDescripcion()); // ← CORREGIDO
-        producto.setNombre(productoRecibido.getNombre());
-        producto.setPeso_gramos(productoRecibido.getPeso_gramos());
-        producto.setPrecio(productoRecibido.getPrecio());
+        proveedor.setNombre(proveedorRecibido.getNombre());
+        proveedor.setContacto(proveedorRecibido.getContacto()); // ← CORREGIDO
+        proveedor.setTelefono(proveedorRecibido.getTelefono());
+        proveedor.setEmail(proveedorRecibido.getEmail());
+        
 
-        productoRepository.save(producto);
-        return ResponseEntity.ok().body(producto);
+        proveedorRepository.save(proveedor);
+        return ResponseEntity.ok().body(proveedor);
     }
 
     
-    @DeleteMapping("/{producto_id}")
-    public ResponseEntity<?> deleteProducto(@PathVariable("producto_id") Long id) {
-        if (!productoRepository.existsById(id))
+    @DeleteMapping("/{proveedor_id}")
+    public ResponseEntity<?> deleteProducto(@PathVariable("proveedor_id") Long id) {
+        if (!proveedorRepository.existsById(id))
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 
-        productoRepository.deleteById(id);
+        proveedorRepository.deleteById(id);
         return ResponseEntity.ok().build();
     }
 }
