@@ -10,8 +10,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.candyshop.main.model.Producto;
-import com.candyshop.main.repository.ProductoRepository;
+import com.candyshop.main.model.Productos;
+import com.candyshop.main.repository.ProductosRepository;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,35 +26,35 @@ import org.springframework.web.bind.annotation.RequestBody;
 public class ApiCandyShopController {
     
     @Autowired
-    private ProductoRepository productoRepository;
+    private ProductosRepository productoRepository;
 
     @GetMapping
-    public List<Producto> getAllProductos(){
+    public List<Productos> getAllProductos(){
         return productoRepository.findAll();
     }
 
     // CORREGIDO: Usar el mismo nombre en @PathVariable
     @GetMapping("/{producto_id}")
-    public ResponseEntity<Producto> getProductoById(@PathVariable("producto_id") Long id) {
+    public ResponseEntity<Productos> getProductoById(@PathVariable("producto_id") Long id) {
         return productoRepository.findById(id)
                 .map(producto -> ResponseEntity.ok().body(producto))
                 .orElse(ResponseEntity.notFound().build());
     }
 
     @PostMapping("/crear")
-    public Producto createProducto(@RequestBody Producto producto) {
+    public Productos createProducto(@RequestBody Productos producto) {
         return productoRepository.save(producto);
     }
 
     @PutMapping("/{producto_id}")
-    public ResponseEntity<Producto> updateProducto(@PathVariable("producto_id") Long id, @RequestBody Producto productoRecibido) {
+    public ResponseEntity<Productos> updateProducto(@PathVariable("producto_id") Long id, @RequestBody Productos productoRecibido) {
 
-        Optional<Producto> productoBD = productoRepository.findById(id);
+        Optional<Productos> productoBD = productoRepository.findById(id);
 
         if (!productoBD.isPresent())
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 
-        Producto producto = productoBD.get();
+        Productos producto = productoBD.get();
 
         // CORREGIDO: setDescripcion ahora recibe la descripción correcta
         producto.setAlergenos(productoRecibido.getAlergenos());

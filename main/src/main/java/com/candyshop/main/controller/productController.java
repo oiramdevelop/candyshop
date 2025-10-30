@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.candyshop.main.model.Producto;
-import com.candyshop.main.repository.ProductoRepository;
+import com.candyshop.main.model.Productos;
+import com.candyshop.main.repository.ProductosRepository;
 
 
 
@@ -26,12 +26,12 @@ public class productController {
     private Logger logger = LoggerFactory.getLogger(productController.class);
     
     @Autowired
-    private ProductoRepository productoRepository;
+    private ProductosRepository productoRepository;
 
     @GetMapping
     public String listProducts(Model model) {
-        List<Producto> listProduct = productoRepository.findAll();
-        model.addAttribute("productos", listProduct); // ✅ Cambiado a "productos"
+        List<Productos> listProduct = productoRepository.findAll();
+        model.addAttribute("productos", listProduct); 
         return "listProduct";
     }
 
@@ -43,20 +43,20 @@ public class productController {
             productoRepository.deleteById(id);
             redAttrib.addFlashAttribute("success", "Producto eliminado correctamente");
         }
-        return "redirect:/productos"; // ✅ Cambiado a "/productos"
+        return "redirect:/productos";
     }
 
     @GetMapping("/nuevo")
     public String newProduct(Model model) {
-        Producto producto = new Producto();
-        model.addAttribute("producto", producto); // ✅ Cambiado a "producto"
+        Productos producto = new Productos();
+        model.addAttribute("producto", producto); 
         return "nuevoProducto";
     }
 
     @PostMapping("/crear")
-    public String createProduct(@ModelAttribute("producto") Producto producto) {
+    public String createProduct(@ModelAttribute("producto") Productos producto) {
         productoRepository.save(producto);
-        return "redirect:/productos"; // ✅ Cambiado a "/productos"
+        return "redirect:/productos"; 
     }
 
     @GetMapping("/editar/{producto_id}")
@@ -64,14 +64,14 @@ public class productController {
         if (!productoRepository.existsById(id)) {
             return "redirect:/productos";
         }
-        Producto producto = productoRepository.findById(id).get();
+        Productos producto = productoRepository.findById(id).get();
         model.addAttribute("producto", producto); // ✅ Cambiado a "producto"
         return "editarProducto"; // ✅ Cambiado a "editarProducto"
     }
 
     @PostMapping("/modificar")
-    public String modifyProduct(@ModelAttribute("producto") Producto producto) {
+    public String modifyProduct(@ModelAttribute("producto") Productos producto) {
         productoRepository.save(producto);
-        return "redirect:/productos"; // ✅ Cambiado a "/productos"
+        return "redirect:/productos"; 
     }
 }

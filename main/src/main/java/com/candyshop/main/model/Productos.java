@@ -9,11 +9,11 @@ import lombok.Data;
 
 @Data
 @Entity
-public class Producto {
+public class Productos {
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long  producto_id;
+    private Long producto_id;
 
     @Column(nullable = false)
     private String alergenos;

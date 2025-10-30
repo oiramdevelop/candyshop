@@ -22,11 +22,11 @@
             </thead>
             <tbody>
                 <!-- Esto debería funcionar -->
-                <tr th:each="producto : ${productos}">
-                    <td th:text="${producto.nombre}">Nombre</td>
-                    <td th:text="${producto.descripcion}">Descripción</td>
-                    <td th:text="${producto.peso_gramos} + 'g'">0g</td>
-                    <td th:text="'€' + ${producto.precio}">€0</td>
+                <tr th:each="Producto : ${productos}">
+                    <td th:text="${Producto.nombre}"></td>
+                    <td th:text="${Producto.descripcion}"></td>
+                    <td th:text="${Producto.peso_gramos} + 'g'"></td>
+                    <td th:text="'€' + ${Producto.precio}"></td>
                 </tr>
             </tbody>
         </table>
