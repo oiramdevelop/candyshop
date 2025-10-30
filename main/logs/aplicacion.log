@@ -3593,3 +3593,34 @@ java.lang.IllegalStateException: Neither BindingResult nor plain target object f
 2025-10-30T16:44:56.403+01:00 TRACE 18620 --- [main] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Rendering view [org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration$StaticView@25890ce3] 
 2025-10-30T16:44:56.410+01:00 DEBUG 18620 --- [main] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 500, headers={}
 2025-10-30T16:46:06.379+01:00 TRACE 18620 --- [main] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/productos", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2025-10-30T16:46:06.380+01:00 TRACE 18620 --- [main] [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to HandlerExecutionChain with [ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]] and 4 interceptors
+2025-10-30T16:46:06.382+01:00 DEBUG 18620 --- [main] [http-nio-8080-exec-6] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2025-10-30T16:46:06.382+01:00 DEBUG 18620 --- [main] [http-nio-8080-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource productos.]
+2025-10-30T16:46:06.382+01:00 TRACE 18620 --- [main] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2025-10-30T16:46:06.382+01:00 DEBUG 18620 --- [main] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND, headers={masked}
+2025-10-30T16:46:06.383+01:00 TRACE 18620 --- [main] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2025-10-30T16:46:06.383+01:00 TRACE 18620 --- [main] [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 matching mappings: [{ [/error], produces [text/html]}, { [/error]}]
+2025-10-30T16:46:06.383+01:00 TRACE 18620 --- [main] [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#errorHtml(HttpServletRequest, HttpServletResponse)
+2025-10-30T16:46:06.384+01:00 TRACE 18620 --- [main] [http-nio-8080-exec-6] o.s.web.method.HandlerMethod             : Arguments: [org.apache.catalina.core.ApplicationHttpRequest@9bd9ed7, org.apache.catalina.connector.ResponseFacade@77a7190]
+2025-10-30T16:46:06.390+01:00 TRACE 18620 --- [main] [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2025-10-30T16:46:06.391+01:00 TRACE 18620 --- [main] [http-nio-8080-exec-6] o.t.spring6.view.ThymeleafViewResolver   : View with key [error_es_ES] served from cache
+2025-10-30T16:46:06.391+01:00 TRACE 18620 --- [main] [http-nio-8080-exec-6] o.s.w.s.v.InternalResourceViewResolver   : View with key [error] served from cache
+2025-10-30T16:46:06.391+01:00 DEBUG 18620 --- [main] [http-nio-8080-exec-6] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, text/html;q=0.8]
+2025-10-30T16:46:06.391+01:00 TRACE 18620 --- [main] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Rendering view [org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration$StaticView@25890ce3] 
+2025-10-30T16:46:06.392+01:00 DEBUG 18620 --- [main] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404, headers={masked}
+2025-10-30T16:46:11.034+01:00 TRACE 18620 --- [main] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/productos", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2025-10-30T16:46:11.035+01:00 TRACE 18620 --- [main] [http-nio-8080-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to HandlerExecutionChain with [ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]] and 4 interceptors
+2025-10-30T16:46:11.036+01:00 DEBUG 18620 --- [main] [http-nio-8080-exec-7] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2025-10-30T16:46:11.036+01:00 DEBUG 18620 --- [main] [http-nio-8080-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource productos.]
+2025-10-30T16:46:11.036+01:00 TRACE 18620 --- [main] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2025-10-30T16:46:11.036+01:00 DEBUG 18620 --- [main] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND, headers={masked}
+2025-10-30T16:46:11.037+01:00 TRACE 18620 --- [main] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2025-10-30T16:46:11.037+01:00 TRACE 18620 --- [main] [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 matching mappings: [{ [/error], produces [text/html]}, { [/error]}]
+2025-10-30T16:46:11.037+01:00 TRACE 18620 --- [main] [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#errorHtml(HttpServletRequest, HttpServletResponse)
+2025-10-30T16:46:11.039+01:00 TRACE 18620 --- [main] [http-nio-8080-exec-7] o.s.web.method.HandlerMethod             : Arguments: [org.apache.catalina.core.ApplicationHttpRequest@418b4f0a, org.apache.catalina.connector.ResponseFacade@4f4ca94b]
+2025-10-30T16:46:11.040+01:00 TRACE 18620 --- [main] [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2025-10-30T16:46:11.040+01:00 TRACE 18620 --- [main] [http-nio-8080-exec-7] o.t.spring6.view.ThymeleafViewResolver   : View with key [error_es_ES] served from cache
+2025-10-30T16:46:11.040+01:00 TRACE 18620 --- [main] [http-nio-8080-exec-7] o.s.w.s.v.InternalResourceViewResolver   : View with key [error] served from cache
+2025-10-30T16:46:11.040+01:00 DEBUG 18620 --- [main] [http-nio-8080-exec-7] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, text/html;q=0.8]
+2025-10-30T16:46:11.040+01:00 TRACE 18620 --- [main] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Rendering view [org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration$StaticView@25890ce3] 
+2025-10-30T16:46:11.040+01:00 DEBUG 18620 --- [main] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404, headers={masked}
