@@ -24,7 +24,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 @RestController
 @RequestMapping("/api/proveedores")
-public class ApiCandyShopController {
+public class ApiProveedoresCandyShop {
     
     @Autowired
     private ProveedorRepository proveedorRepository;
@@ -43,7 +43,7 @@ public class ApiCandyShopController {
     }
 
     @PostMapping("/crear")
-    public Proveedor createProducto(@RequestBody Proveedor proveedor) {
+    public Proveedor createProveedor(@RequestBody Proveedor proveedor) {
         return proveedorRepository.save(proveedor);
     }
 
