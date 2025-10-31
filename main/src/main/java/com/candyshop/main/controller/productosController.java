@@ -12,11 +12,13 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.candyshop.main.model.Productos;
 
-import com.candyshop.main.model.Proveedor;
-import com.candyshop.main.repository.ProveedorRepository;
+import com.candyshop.main.repository.ProductosRepository;
+
 
 /**
  * Controlador MVC para gestionar las operaciones CRUD de Ciudades a través de
@@ -32,8 +34,8 @@ import com.candyshop.main.repository.ProveedorRepository;
  *             - Maneja formularios y redirecciones
  */
 @Controller
-@RequestMapping("/proveedores")
-public class proveedorController {
+@RequestMapping("/productos")
+public class productosController {
 
     /**
      * Logger para registrar eventos y errores
@@ -45,7 +47,7 @@ public class proveedorController {
      * Repositorio de ciudades inyectado automáticamente
      */
     @Autowired
-    private ProveedorRepository proveedorRepository;
+    private ProductosRepository productosRepository;
 
     /**
      * Maneja las peticiones GET a /proveedor
@@ -56,16 +58,16 @@ public class proveedorController {
      * 
      */
     @GetMapping
-    public String listProvedore(Model model) {
+    public String listProducts(Model model) {
         // Recuperamos todas las ciudades de la base de datos
-        List<Proveedor> listaProveedor = proveedorRepository.findAll();
+        List<Productos> listaProductos = productosRepository.findAll();
 
         // Añadimos la lista al modelo para que esté disponible en la vista
-        // En la vista se accederá como ${ciudades}
-        model.addAttribute("proveedores", listaProveedor);
+        // En la vista se accederá como ${productos}
+        model.addAttribute("productos", listaProductos);
 
         // Devolvemos el nombre de la plantilla Thymeleaf
-        return "listProveedores";
+        return "listProduct";
     }
 
     /**
@@ -81,19 +83,19 @@ public class proveedorController {
      *         - @PathVariable: Captura variables de la URL
      *         - RedirectAttributes: Permite pasar mensajes entre redirecciones
      */
-    @GetMapping("/eliminar/{proveedor_id}")
-    public String removeCity(@PathVariable Long id, RedirectAttributes redAttrib) {
+    @GetMapping("/eliminar/{productos_id}")
+    public String removeProduct(@PathVariable Long id, RedirectAttributes redAttrib) {
         // Verificamos si la ciudad existe antes de intentar eliminarla
-        if (!proveedorRepository.existsById(id)) {
+        if (!productosRepository.existsById(id)) {
             // Si no existe, añadimos un mensaje de error que se mostrará en la siguiente
             // vista
             redAttrib.addFlashAttribute("error", "La ciudad no Existe");
             // Registramos el error en el log
             logger.error("No existe la ciudad");
         } else {
-            proveedorRepository.deleteById(id);
-            redAttrib.addFlashAttribute("success", "Se ha borrado Correctamente la ciudad con id " + id);
-            logger.info("Se ha borrado Correctamente la ciudad con id " + id);
+            productosRepository.deleteById(id);
+            redAttrib.addFlashAttribute("success", "Se ha borrado Correctamente el producto  con id " + id);
+            logger.info("Se ha borrado Correctamente el producto  con id " + id);
         }
 
         return "redirect:/ciudades";
@@ -104,54 +106,54 @@ public class proveedorController {
 
         // Creamos una ciudad para que el formulario
         // la asocie a sus datos
-        Proveedor ciudad = new Proveedor();
+        Productos productos = new Productos();
         // La guardamos en el model para que le llegue al formulario
-        model.addAttribute("ciudad", ciudad);
+        model.addAttribute("productos", productos);
         // Cargamos la vista nuevaCiudad
-        return "nuevoProveedor";
+        return "nuevoProductos";
     }
 
     @PostMapping("/crear")
-    public String createCity(@ModelAttribute("proveedor") Proveedor proveedor) {
+    public String createCity(@ModelAttribute("productos") Productos productos) {
 
-        proveedorRepository.save(proveedor);
+        productosRepository.save(productos);
 
-        logger.info("Se ha creado la ciudad con id " + proveedor.getProveedor_id());
+        logger.info("Se ha creado el producto  con id " + productos.getProducto_id());
 
-        return "redirect:/proveedor";
+        return "redirect:/productos";
     }
 
-    @GetMapping("/editar/{proveedor_id}")
-    public String editCity(@PathVariable Long id, Model model) {
+    @GetMapping("/editar/{productos_id}")
+    public String editProductos(@PathVariable Long id, Model model) {
 
         // Primero creo un proveedor en blanco
-        Proveedor proveedor = new Proveedor();
+        Productos productos = new Productos();
 
         // Si no existe el proveedor con id en la bd devuelo el error
-        if (!proveedorRepository.existsById(id))
+        if (!productosRepository.existsById(id))
             model.addAttribute("error", "La ciudad no Existe");
-        // Si existe la proveedor en bd la cargamos
+        // Si existe el producto en bd la cargamos
         else
-            proveedor = proveedorRepository.findById(id).get();
+            productos = productosRepository.findById(id).get();
         // Cargamos la ciudad en el model y cargamos la vista
-        model.addAttribute("proveedor", proveedor);
+        model.addAttribute("productos", productos);
 
-        return "editarProveedor";
+        return "editarProductos";
     }
 
     @PostMapping("/modificar")
-    public String modifyCity(@ModelAttribute("ciudad") Proveedor proveedor, Model model) {
+    public String modifyCity(@ModelAttribute("ciudad") Productos productos, Model model) {
 
         try {
-            // Guardamos el proveedor
-            proveedorRepository.save(proveedor);
+            // Guardamos el productos
+            productosRepository.save(productos);
 
         } catch (Exception e) {
-            model.addAttribute("error", "el Proveedor  no Existe");
-            return "redirect:/proveedor";
+            model.addAttribute("error", "el PRODUCTOS  no Existe");
+            return "redirect:/productos";
         }
 
-        return "redirect:/proveedor";
+        return "redirect:/productos";
 
     }
 

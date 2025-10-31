@@ -45,7 +45,7 @@ public class ApiProductosCandyShop {
     }
 
     @PutMapping("/{porductos_id}")
-    public ResponseEntity<Productos> updateProducto(@PathVariable("proveedor_id") Long id, @RequestBody Productos productosRecibidos) {
+    public ResponseEntity<Productos> updateProducto(@PathVariable("productos_id") Long id, @RequestBody Productos productosRecibidos) {
 
         Optional<Productos> productosBD = productosRepository.findById(id);
 
