@@ -14,9 +14,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-
+import com.candyshop.main.model.Productos;
 import com.candyshop.main.model.Proveedor;
+import com.candyshop.main.repository.ProductosRepository;
 import com.candyshop.main.repository.ProveedorRepository;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 /**
  * Controlador MVC para gestionar las operaciones CRUD de Ciudades a través de
@@ -46,6 +49,8 @@ public class proveedorController {
      */
     @Autowired
     private ProveedorRepository proveedorRepository;
+    @Autowired
+    private ProductosRepository productosRepository;
 
     /**
      * Maneja las peticiones GET a /proveedor
@@ -155,5 +160,23 @@ public class proveedorController {
 
     }
 
+
+
+@GetMapping("/{proveedorId}/productos")
+public String listarProductosPorProveedor(@PathVariable("proveedorId") Long proveedorId, Model model) {
+
+    // ✅ Usar el método corregido
+    List<Productos> productosProveedor = productosRepository.findByProveedorId(proveedorId);
+
+    Proveedor proveedor = proveedorRepository.findById(proveedorId).orElse(null);
+
+    model.addAttribute("proveedor", proveedor);
+    model.addAttribute("productos", productosProveedor);
+
+    return "listProductByProveedor";
 }
+
+
+}
+
 

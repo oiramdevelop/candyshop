@@ -31,7 +31,7 @@ public class Productos {
 
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "proveedor_id", nullable = false) // Columna de clave foránea
+    @JoinColumn(name = "proveedor_id", nullable = true) // Columna de clave foránea
     @JsonBackReference
     private Proveedor proveedor;
 

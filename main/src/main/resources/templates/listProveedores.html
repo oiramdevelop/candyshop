@@ -26,31 +26,39 @@
             <thead>
                 <tr>
                     <th>Nombre</th>
-                    <th>Pais</th>
-                    <th>Extension</th>
-                    <th>Fecha</th>
-                    <th>Num. Habitantes</th>
+                    <th>Contacto</th>
+                    <th>Teléfono</th>
+                    <th>Email</th>
+                    <th>Acciones</th>
                 </tr>
             </thead>
 
-
             <tbody>
                 <tr th:each="proveedor : ${proveedores}">
-
-                    <td th:text="${proveedor.nombre}"></td>
-                    <td th:text="${proveedor.contacto}"></td>
-                    <td th:text="${proveedor.telefono}"></td>
-                    <td th:text="${proveedor.email}"> </td>
-                    
+                    <!-- ✅ NOMBRE CLICKEABLE PARA VER PRODUCTOS -->
                     <td>
-                        <a th:href="@{/proveedores/editar/{proveedor_id}(proveedor_id=${proveedor.proveedor_id})}" class="btn btn-secondary btn-sm">
-                            Modificar
+                        <a th:href="@{/proveedores/{proveedorId}/productos(proveedorId=${proveedor.proveedor_id})}" 
+                           class="btn btn-link text-decoration-none fw-bold p-0" 
+                           th:text="${proveedor.nombre}">
                         </a>
                     </td>
+                    
+                    <td th:text="${proveedor.contacto}"></td>
+                    <td th:text="${proveedor.telefono}"></td>
+                    <td th:text="${proveedor.email}"></td>
+                    
                     <td>
-                        <a th:href="@{/proveedores/eliminar/{proveedor_id}(proveedor_id=${proveedor.proveedor_id})}" class="btn btn-danger btn-sm">
-                            Eliminar
-                        </a>
+                        <div class="btn-group" role="group">
+                            <a th:href="@{/proveedores/editar/{proveedor_id}(proveedor_id=${proveedor.proveedor_id})}" 
+                               class="btn btn-secondary btn-sm">
+                                Modificar
+                            </a>
+                            <a th:href="@{/proveedores/eliminar/{proveedor_id}(proveedor_id=${proveedor.proveedor_id})}" 
+                               class="btn btn-danger btn-sm"
+                               onclick="return confirm('¿Estás seguro de que quieres eliminar este proveedor?');">
+                                Eliminar
+                            </a>
+                        </div>
                     </td>
                 </tr>
             </tbody>

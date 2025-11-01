@@ -20,6 +20,10 @@
             color: white !important;
             font-size: 1.5rem;
         }
+        .navbar-brand img {
+            height: 50px; 
+            width: 50px;
+        }
         .nav-link {
             color: white !important;
         }
@@ -46,7 +50,7 @@
     <!-- Barra de navegación -->
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand" href="#">CandyShop</a>
+            <a class="navbar-brand" href="#"><img src="logo1.png"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Menú">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -54,10 +58,10 @@
             <div class="collapse navbar-collapse" id="menu">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Productos</a>
+                        <a class="nav-link" th:href="@{/productos}">Productos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Proveedores</a>
+                        <a class="nav-link" th:href="@{/proveedores}">Proveedores</a>
                     </li>
                 </ul>
             </div>
@@ -66,7 +70,7 @@
 
     <!-- Sección principal -->
     <section class="hero">
-        <h1>¡Bienvenido a la Tienda de Chuches!</h1>
+        <img src="logo1.png">
         <p>Descubre los dulces más deliciosos y coloridos para alegrar tu día 🍭</p>
     </section>
 
